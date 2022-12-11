@@ -2,7 +2,7 @@
 
 #include "gtest/gtest.h"
 
-#include "matrix_def.h"
+#include "matrix_constructor.h"
 #include "matrix_pointers.h"
 #include "matrix_eq.h"
 
