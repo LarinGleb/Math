@@ -26,7 +26,7 @@ endfunction()
 project(MathC)
 
 include_directories(inc/linear_algebra)
-
+include_directories(inc/tests)
 #add_subdirectory(src)
 
 if (${WITH_TESTS})
