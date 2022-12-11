@@ -26,7 +26,7 @@ inline ::testing::AssertionResult matrix_eq(const struct __matrix_s_float* __lva
     }
 
     if (__lvalue->__c_row != __rvalue->__c_row) {
-        std::cout << "Difference column count: " << __lvalue->__c_row << " and " << __rvalue->__c_row << std::endl;
+        std::cout << "Difference row count: " << __lvalue->__c_row << " and " << __rvalue->__c_row << std::endl;
         return ::testing::AssertionFailure();
     }
 
