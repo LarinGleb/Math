@@ -11,7 +11,7 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 Log("[${TIME}] tests/CMakeLists.txt: added includes to gtest")
 
 
-add_executable(unit_tests unit/basic_init_matrix_test.cpp)
+add_executable(unit_tests unit/constructor_matrix_test.cpp unit/ptr_value_matrix_test.cpp unit/basic_op_matrix_test.cpp)
 target_link_libraries(unit_tests gtest gtest_main gmock pthread)
 Log("[${TIME}] tests/CMakeLists.txt: linked libs for unit tests")
 

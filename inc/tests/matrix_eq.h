@@ -5,11 +5,13 @@
 
 #include "gtest/gtest.h"
 
-#include "matrix_defines.h"
+#include "matrix_constructor.h"
 
 inline bool values_eq(const float* __lvalue, const float* __rvalue, const std::size_t __c_row, const std::size_t __c_col) {
+    //std::cout << __c_row << " " << __c_col << std::endl;
     for (std::size_t __row = 0; __row < __c_row; __row++) {
-        for (std::size_t __col; __col < __c_col; __col ++) {
+        for (std::size_t __col = 0; __col < __c_col; __col ++) {
+            //std::cout << *(__lvalue + __c_row * __row + __col) << " " << *(__rvalue + __c_row * __row + __col) << std::endl;
             if (*(__lvalue + __c_row * __row + __col) != *(__rvalue + __c_row * __row + __col)) {
                 return false;
             }
@@ -31,7 +33,7 @@ inline ::testing::AssertionResult matrix_eq(const struct __matrix_s_float* __lva
     }
 
     if (!values_eq(__lvalue->__values, __rvalue->__values, __lvalue->__c_row, __lvalue->__c_col)) {
-        std::cout << "Difference values count: " << std::endl;
+        std::cout << "Difference values" << std::endl;
         return ::testing::AssertionFailure();
     }
 
