@@ -4,14 +4,8 @@
 #include <stdio.h>
 #include <limits.h>
 
-#include "matrix_def.h"
+#include "matrix_constructor.h"
 #include "matrix_pointers.h"
-
-#define add(__lvalue, __rvalue) operator_add_set(&__lvalue, &__rvalue)
-#define mul(__lvalue, __rvalue) operator_mul_get(&__lvalue, &__rvalue)
-#define get(__matrix, __row, __col) operator_get_return(&__matrix, __row, __col)
-#define vptr(__matrix, __row, __col) ptr_value(&__matrix, __row, __col)
-
 
 // ---------- OPERATORS-GETERS FLOAT----------
 inline float operator_get_return(const struct __matrix_s_float* __matrix, const size_t __row, const size_t __col) {

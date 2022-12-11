@@ -5,7 +5,7 @@
 
 #include "gtest/gtest.h"
 
-#include "matrix_def.h"
+#include "matrix_defines.h"
 
 inline bool values_eq(const float* __lvalue, const float* __rvalue, const std::size_t __c_row, const std::size_t __c_col) {
     for (std::size_t __row = 0; __row < __c_row; __row++) {
